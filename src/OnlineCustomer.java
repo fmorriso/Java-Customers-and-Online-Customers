@@ -11,8 +11,9 @@ public class OnlineCustomer extends Customer {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("OnlineCustomer{")
-            .append("email='").append(email).append('\'')
-            .append('}');
+                .append(super.toString())
+                .append(", email='").append(email).append('\'')
+                .append('}');
         return sb.toString();
     }
 }
