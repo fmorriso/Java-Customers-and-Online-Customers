@@ -14,6 +14,8 @@ public class OnlineCustomer extends Customer {
                 .append(super.toString())
                 .append(", email='").append(email).append('\'')
                 .append('}');
-        return sb.toString();
+        return sb.toString()
+                .replaceFirst("\\{Customer\\{", "{")
+                .replaceFirst("}", "");
     }
 }
